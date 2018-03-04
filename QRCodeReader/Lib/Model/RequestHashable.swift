@@ -8,6 +8,19 @@
 
 import UIKit
 
-class RequestHashable: NSObject {
-
+class RequestHashable: Hashable {
+    var code: String = ""
+    var dateTime: String = ""
+    
+    init(_code: String, _dateTime: String) {
+        code = _code
+        dateTime = _dateTime
+    }
+    static func ==(lhs: RequestHashable, rhs: RequestHashable) -> Bool {
+        return lhs.code == rhs.code && lhs.dateTime == rhs.dateTime
+    }
+    var hashValue: Int {
+        return code.hashValue ^ dateTime.hashValue
+    }
+    
 }

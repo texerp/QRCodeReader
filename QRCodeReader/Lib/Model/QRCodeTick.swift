@@ -7,7 +7,23 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class QRCodeTick: NSObject {
+class QRCodeTick: NSObject,Mappable {
+    var type: NSString?
+    var code: NSString? = "barcode"
+    
+    required init?(map: Map) {
+        
+    }
+    
+    override init() {
+        super.init()
+    }
+    
 
+    func mapping(map: Map) {
+        type       <- map["type"]
+        code     <- map["code"]
+    }
 }
