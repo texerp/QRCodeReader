@@ -15,6 +15,8 @@
 		18181F94204BD550002777AF /* QRCodeTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18181F93204BD550002777AF /* QRCodeTick.swift */; };
 		18181F96204BEB38002777AF /* StoreQRCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18181F95204BEB38002777AF /* StoreQRCodeRequest.swift */; };
 		186AFC42204C32BC00EA3673 /* RequestHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AFC41204C32BC00EA3673 /* RequestHashable.swift */; };
+		186AFC46204C4C8C00EA3673 /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 186AFC45204C4C8C00EA3673 /* done.mp3 */; };
+		186AFC48204C4EAE00EA3673 /* fail-buzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 186AFC47204C4EAE00EA3673 /* fail-buzzer.mp3 */; };
 		30A0E6F0A20789BCB321197F /* Pods_QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F036BCDFA3AB0ED2078456FD /* Pods_QRCodeReader.framework */; };
 		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
 		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		18181F93204BD550002777AF /* QRCodeTick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTick.swift; sourceTree = "<group>"; };
 		18181F95204BEB38002777AF /* StoreQRCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreQRCodeRequest.swift; sourceTree = "<group>"; };
 		186AFC41204C32BC00EA3673 /* RequestHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHashable.swift; sourceTree = "<group>"; };
+		186AFC45204C4C8C00EA3673 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
+		186AFC47204C4EAE00EA3673 /* fail-buzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fail-buzzer.mp3"; sourceTree = "<group>"; };
 		58C5DE9D231C1887D6ED3A69 /* Pods-QRCodeReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeReader/Pods-QRCodeReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F036BCDFA3AB0ED2078456FD /* Pods_QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F09DB31DAF669400026BB2 /* QRCodeReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		186AFC43204C4C8C00EA3673 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				186AFC44204C4C8C00EA3673 /* Sound */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		186AFC44204C4C8C00EA3673 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				186AFC47204C4EAE00EA3673 /* fail-buzzer.mp3 */,
+				186AFC45204C4C8C00EA3673 /* done.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		1881E874204BAEB400B02723 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +150,7 @@
 		F4F09DB51DAF669400026BB2 /* QRCodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				186AFC43204C4C8C00EA3673 /* Resource */,
 				18181F90204BD29F002777AF /* Constant.swift */,
 				18181F7E204BC5D0002777AF /* AVCamBarcode */,
 				1881E874204BAEB400B02723 /* Lib */,
@@ -205,8 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186AFC46204C4C8C00EA3673 /* done.mp3 in Resources */,
 				F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */,
 				F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */,
+				186AFC48204C4EAE00EA3673 /* fail-buzzer.mp3 in Resources */,
 				F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

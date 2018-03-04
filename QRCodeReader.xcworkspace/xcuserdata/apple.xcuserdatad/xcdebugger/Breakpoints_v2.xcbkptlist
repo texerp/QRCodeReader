@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QRCodeReader/Lib/Service/AFWrapper.swift"
-            timestampString = "541849655.042861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "requestPOSTURL(_:params:headers:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "QRCodeReader/AVCamBarcode/PreviewView.swift"
             timestampString = "541849655.042923"
             startingColumnNumber = "9223372036854775807"
@@ -58,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QRCodeReader/AVCamBarcode/CameraViewController.swift"
-            timestampString = "541869778.1642931"
+            timestampString = "541871871.908303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "610"
-            endingLineNumber = "610"
-            landmarkName = "checkRequestDuplicatePermin(qrcode:)"
+            startingLineNumber = "603"
+            endingLineNumber = "603"
+            landmarkName = "CallAPIQRCodeTick(qrcode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,6 +14,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 	// MARK: View Controller Life Cycle
     var requestAllow : Bool = true
     var arrHash: [Int] = []
+    var player : AVAudioPlayer?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -594,11 +595,12 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let commonHeaders = ["content-type" : "application/json"]
         let params = ["code": qrcode, "type": "barcode"]
         AFWrapper.requestPOSTURL(Constants.utilapis.qrcodetick, params: params as [String : AnyObject], headers: commonHeaders, success: {  (JSONResponse) -> Void in
-            print(JSONResponse)
+            self.playSound(name: "done")
             
         }) {
             (error) -> Void in
             print(error)
+            self.playSound(name: "fail-buzzer")
         }
         
     }
@@ -630,6 +632,25 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 	
 	private var metadataObjectOverlayLayers = [MetadataObjectLayer]()
 
+    func playSound(name: String) {
+        if let soundURL = Bundle.main.url(forResource: name, withExtension: "mp3") {
+            
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+                try AVAudioSession.sharedInstance().setActive(true)
+                player = try AVAudioPlayer(contentsOf: soundURL)
+                if let thePlayer = player {
+                    thePlayer.prepareToPlay()
+                    thePlayer.play()
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+    }
+    
+    
     
     // MARK: Call API After have result from scan QR
 	private func createMetadataObjectOverlayWithMetadataObject(_ metadataObject: AVMetadataObject) -> MetadataObjectLayer {
